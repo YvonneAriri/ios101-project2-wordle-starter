@@ -25,8 +25,8 @@ extension BoardController {
                    options: [.autoreverse],
                    animations: {
       cell.transform = cell.transform.scaledBy(x: 1.05, y: 1.05)
-    }, completion: { finished in
-      cell.transform = CGAffineTransformIdentity
+    }, completion: { (finished) in
+        cell.transform = CGAffineTransform.identity
     })
     if isFinalGuessInRow() {
       markLettersInRow()
